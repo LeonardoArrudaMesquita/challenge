@@ -1,0 +1,16 @@
+.container{
+    width: 60%;
+    border: 1px solid yellow;
+}
+
+.row{
+    height: 200px;
+    width: 100%;
+    display: flex;    
+}
+
+.square{
+    width: 33.333%;    
+    height: 100%;        
+    border: 1px solid black;   
+}
