@@ -1,21 +1,23 @@
-.container{
-    width: 60%;
-    border: 1px solid yellow;
-}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 450px;
+    width: 45%;
 
-.row{
-    height: 200px;
-    width: 100%;
-    display: flex;    
-}
+  }
 
-.square{
-    width: 33.333%;    
-    height: 100%;        
-    border: 1px solid black;   
-}
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);    
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    display:block;
+  }
 
-img{
-    height: 200px;
-    width: 200px;
-}
+  p{
+      font-size: 100%;
+      margin: 0;
+  }

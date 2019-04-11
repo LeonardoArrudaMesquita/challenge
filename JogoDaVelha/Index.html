@@ -12,23 +12,34 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="square" id="square1" onclick="play()"></div>
-            <div class="square" id="square2" onclick="play()"></div>
-            <div class="square" id="square3" onclick="play()"></div>
-        </div>
-        <div class="row">
-            <div class="square" id="square4" onclick="play()"></div>
-            <div class="square" id="square5" onclick="play()"></div>
-            <div class="square" id="square6" onclick="play()"></div>
-        </div>
-        <div class="row">
-            <div class="square" id="square7" onclick="play()"></div>
-            <div class="square" id="square8" onclick="play()"></div>
-            <div class="square" id="square9" onclick="play()"></div>
-        </div>
+    <div class="grid-container">
+        <div class="grid-item" id="square1" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square2" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square3" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square4" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square5" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square6" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square7" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square8" onclick="play(event.target.id)"></div>
+        <div class="grid-item" id="square9" onclick="play(event.target.id)"></div>
     </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="square" id="square1" onclick="play(event.target.id)"></div>
+            <div class="square" id="square2" onclick="play(event.target.id)"></div>
+            <div class="square" id="square3" onclick="play(event.target.id)"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="square4" onclick="play(event.target.id)"></div>
+            <div class="square" id="square5" onclick="play(event.target.id)"></div>
+            <div class="square" id="square6" onclick="play(event.target.id)"></div>
+        </div>
+        <div class="row">
+            <div class="square" id="square7" onclick="play(event.target.id)"></div>
+            <div class="square" id="square8" onclick="play(event.target.id)"></div>
+            <div class="square" id="square9" onclick="play(event.target.id)"></div>
+        </div>
+    </div> -->
 </body>
 
 </html>
