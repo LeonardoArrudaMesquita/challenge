@@ -1,13 +1,22 @@
-function Main() {
 
-//     //Relaciona o elemento canvas com o js
-//     var tela = document.querySelector("#myCanvas");
+move = 9; 
 
-//     //O contexto possui parâmetros para desenhar
-//     var pincel = tela.getContext("2d");
+//var evento = event.target.getElementById;
+//debugger;
 
-//     pincel.fillStyle = "orange";
-//     pincel.fillRect(0, 0, 200, 200);
+function play(){
+
+    if( move % 2 == 0)
+    {        
+        this.getElementById(this).innerHTML = '<img src="img/circle.png">';
+        document.getElementById(this).innerHTML = '<img src="img/circle.png">';
+    }
+    else
+    {
+        this.getElementById(this).innerHTML = '<img src="img/x.png">';
+    }
+    move--;
+
 }
 
-document.addEventListener("DOMContentLoaded", Main);
+// btn.addEventListener("click", function(){titulo.innerText= txt.value;});}
