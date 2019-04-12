@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <h1>Jogo da Velha #</h1>
     <div class="grid-container">
         <div class="grid-item" id="square1" onclick="play(event.target.id)"></div>
         <div class="grid-item" id="square2" onclick="play(event.target.id)"></div>
@@ -22,8 +23,9 @@
         <div class="grid-item" id="square7" onclick="play(event.target.id)"></div>
         <div class="grid-item" id="square8" onclick="play(event.target.id)"></div>
         <div class="grid-item" id="square9" onclick="play(event.target.id)"></div>
-    </div>
-    <input type="button" onclick="document.location.reload(true)" value="Reiniciar">    
+    </div>    
+    <p><label id="lblWinner">Status da Jogada: </label></p>
+    <input type="button" onclick="document.location.reload(true)" value="Reiniciar"> 
 </body>
 
 </html>
