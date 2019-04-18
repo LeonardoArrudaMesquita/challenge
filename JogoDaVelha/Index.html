@@ -13,19 +13,26 @@
 
 <body>
     <h1>Jogo da Velha #</h1>
-    <div class="grid-container">
-        <div class="grid-item" id="square1" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square2" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square3" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square4" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square5" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square6" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square7" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square8" onclick="play(event.target.id)"></div>
-        <div class="grid-item" id="square9" onclick="play(event.target.id)"></div>
-    </div>    
+    <div id="jogo">
+        <div class="linha">
+            <div class="casa" id="square1" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square2" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square3" onclick="play(event.target.id)"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="square4" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square5" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square6" onclick="play(event.target.id)"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="square7" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square8" onclick="play(event.target.id)"></div>
+            <div class="casa" id="square9" onclick="play(event.target.id)"></div>
+        </div>
+    </div>
+    
     <p><label id="lblWinner">Status da Jogada: </label></p>
-    <input type="button" onclick="document.location.reload(true)" value="Reiniciar"> 
+    <input type="button" onclick="document.location.reload(true)" value="Reiniciar">
 </body>
 
 </html>

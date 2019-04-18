@@ -63,14 +63,15 @@ function play(idElementClicked) {
     }
 }
 
+//<img src="./img/circle.png>
 function setElement(idElementClicked) {
     if (move % 2 == 0 && move != 0) {
-        document.getElementById(idElementClicked).innerHTML = '<p>X</p>';
+        document.getElementById(idElementClicked).innerHTML = '<img src="./img/x.png" />';
         move--;
         return 2; //X
     }
     else {
-        document.getElementById(idElementClicked).innerHTML = '<p>O</p>';
+        document.getElementById(idElementClicked).innerHTML = '<img src="./img/circle.png" />';
         move--;
         return 1; //O
     }

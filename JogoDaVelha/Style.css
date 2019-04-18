@@ -1,24 +1,3 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-  height: 450px;
-  width: 45%; 
-  float: left;
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  font-size: 30px;
-  text-align: center;
-  margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 70px;
-  font: bold;
-}
-
 p {
   font-size: 25px;
   margin: 0;
@@ -43,4 +22,27 @@ input[type=button] {
   font: bold;
   color: white;
   cursor: pointer;
+}
+
+#jogo{
+  width:603px;
+  height:600px;
+  border:solid 3px
+}
+
+.linha{
+  height:200px;
+  border-bottom:solid 1px;
+}
+
+.casa{
+  width:200px;
+  height:100%;
+  border-right:solid 1px;
+  float:left;
+}
+
+img{
+  width: 200px;
+  height: 200px;
 }
