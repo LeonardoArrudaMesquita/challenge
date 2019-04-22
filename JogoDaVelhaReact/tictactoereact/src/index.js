@@ -29,17 +29,23 @@ class Board extends React.Component {
     }
 
     handleClick(i) {
-        const squares = this.state.squares.slice();
+        if (this.state.move <= 8) {
+            const squares = this.state.squares.slice();
 
-        if (calculateWinner(squares) || squares[i]) {
-            return;
+            if (calculateWinner(squares) || squares[i]) {
+                return;
+            }
+    
+            squares[i] = this.state.xIsNext ? 'X' : 'O';        
+            this.setState({
+                squares: squares,
+                xIsNext: !this.state.xIsNext,
+                move: this.state.move + 1
+            }) 
         }
-
-        squares[i] = this.state.xIsNext ? 'X' : 'O';        
-        this.setState({
-            squares: squares,
-            xIsNext: !this.state.xIsNext   
-        })
+        else{
+           alert("Empatou");
+        }
     }
 
     renderSquare(i) {
@@ -56,7 +62,7 @@ class Board extends React.Component {
         console.log(this.state);
 
         const winner = calculateWinner(this.state.squares);
-        let status = "Status da jogada: ";
+        var status = "Status da jogada: ";
 
         if (winner) {
             status += "O jogador '" + winner + "' venceu !";
