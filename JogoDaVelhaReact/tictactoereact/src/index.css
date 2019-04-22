@@ -1,0 +1,49 @@
+p {
+    font-size: 25px;
+    margin: 0;
+    margin: 16px 32px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font: bold;
+  }
+  
+  label {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font: bold;
+  }
+  
+  input[type=button] {
+    margin: 5px 0px 0px 5px;
+    padding: 16px 32px;
+    background-color: rgb(47, 74, 165);
+    font-size: 25px;
+    border: none;
+    font: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #jogo{
+    width:603px;
+    height:600px;
+    border:solid 3px
+  }
+  
+  .linha{
+    height:200px;
+    border-bottom:solid 1px;
+  }
+  
+  .casa{
+    width:200px;
+    height:100%;
+    border-right:solid 1px;
+    float:left;
+  }
+  
+  img{
+    width: 200px;
+    height: 200px;
+  }
+  
