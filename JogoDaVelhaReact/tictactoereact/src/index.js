@@ -1,51 +1,48 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
+import circle from './circle.png'
+import x from './x.png'
 
-// const play = event => {
+function Square(props) {
+    return (
 
-//     if (condition) {
+        //<button className="casa" onClick={this.play}></button>
+        <div className="casa" onClick={props.onClick}>
 
-//     } else {
+            {props.value}
 
-//     }
-
-// }
-
-//Declarando o Square como um componente React
-class Square extends React.Component {    
-    render() {
-        return(
-
-            //className = class => css
-            //<button className="casa" onClick={this.play}></button>
-            <div className="casa" 
-                onClick={() => this.props.onClick()}>
-
-                {this.state.value}
-
-            </div>
-        );
-    }
+        </div>
+    );
 }
+
 
 class Board extends React.Component {
     constructor(props) {
 
         super(props);
-        this.setState = {
-            squares: Array(9).fill(null) // Array que representa cada Square do Board
+        this.state = {
+            squares: Array(9).fill(null), // Array que representa cada Square do Board
+            xIsNext: true,
+            move: 0
         }
     }
 
-    handleClick(i){
+    handleClick(i) {
         const squares = this.state.squares.slice();
-        squares[i] = 'X';
-        this.setState({squares: squares})
-    }    
 
-    //Método passando como parametro um inteiro e que retorna o Component Square
-    renderSquare(i){
+        if (calculateWinner(squares) || squares[i]) {
+            return;
+        }
+
+        squares[i] = this.state.xIsNext ? 'X' : 'O';        
+        this.setState({
+            squares: squares,
+            xIsNext: !this.state.xIsNext   
+        })
+    }
+
+    renderSquare(i) {
         return (
             <Square
                 value={this.state.squares[i]}
@@ -55,8 +52,18 @@ class Board extends React.Component {
     }
 
     render() {
-        return(
-            <div>
+
+        console.log(this.state);
+
+        const winner = calculateWinner(this.state.squares);
+        let status = "Status da jogada: ";
+
+        if (winner) {
+            status += "O jogador '" + winner + "' venceu !";
+        }
+
+        return ( 
+            <div>                    
                 {/* Linha 1 */}
                 <div className="linha">
                     {this.renderSquare(0)}
@@ -77,6 +84,9 @@ class Board extends React.Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
+
+                <div className="status">{status}</div>
+                <input type="button" value="Reiniciar" onClick={() => document.location.reload(true)}></input>                
             </div>
         );
     }
@@ -86,14 +96,37 @@ class Board extends React.Component {
 class Game extends React.Component {
     render() {
         return (
-            <div className="jogo">
+            <div id="jogo">
                 <Board />
             </div>
         )
     }
 }
 
-// //Define qual component será inicializado primeiramente
+function calculateWinner(squares) {
+    const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    // === operador lógico que verifica se os valores são iguais e são do mesmo tipo
+    for (let i = 0; i < lines.length; i++) {
+        
+        const [a, b, c] = lines[i];
+
+        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+            return squares[a];
+        }
+    }
+    return null;
+}
+
 ReactDOM.render(<Game />,
     document.getElementById("root")
 );
