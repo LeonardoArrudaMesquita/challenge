@@ -1,0 +1,14 @@
+<div id="jogo" >
+    <div class="linha" [class.locked]="lock" *ngFor="let casa of board" 
+      class="casa" 
+      [class.checked]="casa.value != ''"
+      (click)="play(this.casa)">
+      <img src = "./assets/img/{{casa.value}}" /> 
+      <!-- {{casa.value}} -->
+    </div>
+    <input type="button" class="botao" name="limpar" value="Reiniciar" (click)="start()" />
+  </div>
+  <div class="direita">
+    <p>{{status}}</p> <div id="mostra" class="vez">{{turn}}</div>
+  </div> 
+  
